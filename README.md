@@ -1,4 +1,12 @@
+<!-- @format -->
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Set-up
+
+(1) npm i after after cloning project
+(2) npm start to run the project
+(3) click the button to make the modal appear
 
 ## Available Scripts
 
