@@ -6,10 +6,10 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Button } from "@material-ui/core";
-import Text from "./Text";
-import Selector from "./Selector";
-import Text2 from "./Text2";
-import Upload from "./Upload";
+import Text from "./Components/Text";
+import Selector from "./Components/Selector";
+import Text2 from "./Components/Text2";
+import Upload from "./Components/Upload";
 const useStyles = makeStyles(theme => ({
 	modal: {
 		display: "flex",
@@ -49,32 +49,37 @@ export default function App() {
 		text2: "",
 		upload: "",
 	});
-
+	//opens the modal
 	const handleOpen = () => {
 		setOpen(true);
 	};
+	//closes the modal
 
 	const handleClose = () => {
 		setOpen(false);
 		setActiveIndex(0);
 		setRead(false);
 	};
+	//next button
 	const handleNext = () => {
 		setActiveIndex(activeIndex + 1);
 		if (activeIndex === 3) {
 			setRead(true);
 		}
 	};
+	//back button
 	const handdleBack = () => {
 		setActiveIndex(activeIndex - 1);
 		if (activeIndex <= 4 && read === true) {
 			setRead(false);
 		}
 	};
-
+	//assign the factory button
 	const handleSubmit = () => {
 		console.log(data);
+		handleClose();
 	};
+	//handle value in form
 	const handleChange = e => {
 		const { name, value } = e.target;
 
